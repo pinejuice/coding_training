@@ -64,4 +64,8 @@ func main() {
 		Sun
 	)
 	fmt.Println(Thu) //3
+
+	// 文字列の出力
+	var str1 string = "Hello "
+	fmt.Println(str1)
 }

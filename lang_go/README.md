@@ -167,7 +167,12 @@ const (
 ```
 
 ### 文字列
-
+Goで文字列を扱う場合、`"`で囲って使用する。  
+コンソール出力する場合は、fmtパッケージの`Println`メソッドを使用する。
+```go
+var str1 string = "Hello "
+fmt.Println(str1)
+```
 
 ### 配列とスライス
 
