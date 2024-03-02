@@ -1,7 +1,9 @@
 // 基本的な文法に関する内容を記載
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // グローバル変数の宣言
 var word string = "Hello world."
@@ -68,4 +70,21 @@ func main() {
 	// 文字列の出力
 	var str1 string = "Hello "
 	fmt.Println(str1)
+	// 文字列の結合
+	var str2 string = str1 + "world!"
+	fmt.Println(str2)
+	fmt.Println(str1 + "world!")
+	fmt.Printf("%c %c\n", str2[0], str2[8])
+	// 文字列の書き換え
+	str3 := []byte(str2)
+	str3[0] = 'h'
+	str2 = string(str3)
+	fmt.Println(str2)
+
+	// 複数行の文字列の宣言
+	var str4 = `今日の
+夕飯は
+お寿司でした。
+`
+	fmt.Println(str4)
 }

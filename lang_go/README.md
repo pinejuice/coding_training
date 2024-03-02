@@ -168,12 +168,37 @@ const (
 
 ### 文字列
 Goで文字列を扱う場合、`"`で囲って使用する。  
-コンソール出力する場合は、fmtパッケージの`Println`メソッドを使用する。
+コンソール出力する場合は、fmtパッケージの`Println`メソッドを使用する。  
+文字列同士の結合も可能である。
 ```go
 var str1 string = "Hello "
-fmt.Println(str1)
+fmt.Println(str1) // Hello 
+var str2 string = str1 + "world!"
+fmt.Println(str2) // Hello world!
 ```
+また、文字列はバイト列で構成されているため、添え字でのアクセスが可能である。  
+但し、string型で宣言すると、イミュータブルな値になるため、値の書き換えができなくなる。  
+書き換える場合は、バイト列に変換してから行う必要がある。
+```go
+fmt.Printf("%c, %c", str2[0], str2[8]) // H, r
 
+str3 := []byte(str2)
+str3[0] = 'h'
+str2 = string(str3)
+fmt.Println(str2) // hello world!
+```
+Goで複数行の文字列を扱う場合は、`` ` ``で囲うことで使用できる。
+```go
+var str4 = `今日の
+夕飯は
+お寿司でした。
+`
+fmt.Println(str4)
+// 今日の
+// 夕飯は
+// お寿司でした。
+// 
+```
 ### 配列とスライス
 
 
