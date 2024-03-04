@@ -9,6 +9,17 @@ import (
 var word string = "Hello world."
 
 func main() {
+	// 変数と定数について
+	variablesAndConstants()
+
+	// 文字列について
+	strings()
+
+	// 配列とスライスについて
+	arraysAndSlices()
+}
+
+func variablesAndConstants() {
 	// グローバル変数の出力
 	fmt.Println(word)
 
@@ -66,7 +77,9 @@ func main() {
 		Sun
 	)
 	fmt.Println(Thu) //3
+}
 
+func strings() {
 	// 文字列の出力
 	var str1 string = "Hello "
 	fmt.Println(str1)
@@ -86,7 +99,9 @@ func main() {
 お寿司でした。
 `
 	fmt.Println(str4)
+}
 
+func arraysAndSlices() {
 	// 配列
 	var list1 [5]int
 	list1[0] = 10
