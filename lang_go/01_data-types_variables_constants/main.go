@@ -17,6 +17,9 @@ func main() {
 
 	// 配列とスライスについて
 	arraysAndSlices()
+
+	// マップについて
+	maps()
 }
 
 func variablesAndConstants() {
@@ -145,4 +148,10 @@ func arraysAndSlices() {
 	n := 4
 	slice7 = slice7[:n+copy(slice7[n:], slice7[n+1:])]
 	fmt.Println("slice7: ", slice7) // [1 2 3 4 6 7 8 9 10]
+}
+
+func maps() {
+	var map1 = make(map[string]int)
+	map1["Hokkaido"] = 1
+	fmt.Println(map1)
 }
