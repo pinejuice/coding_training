@@ -277,4 +277,6 @@ fmt.Println("slice7: ", slice7) // [1 2 3 4 6 7 8 9 10]
 キーには、文字列以外も指定可能であり、宣言時にはmakeを用いて宣言する。
 ```go
 map1 := make(map[string]int)
+map1["Hokkaido"] = 1
+map1["Okinawa"] = 47
 ```
