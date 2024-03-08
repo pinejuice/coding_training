@@ -154,4 +154,11 @@ func maps() {
 	var map1 = make(map[string]int)
 	map1["Hokkaido"] = 1
 	fmt.Println(map1)
+	map1["Hokkaido"] = 3
+	fmt.Println(map1)
+
+	map2 := make(map[int]string)
+	map2[1] = "Hokkaido"
+	map2[47] = "Okinawa"
+	fmt.Println(map2)
 }
