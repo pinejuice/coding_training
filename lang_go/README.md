@@ -275,7 +275,8 @@ fmt.Println("slice7: ", slice7) // [1 2 3 4 6 7 8 9 10]
 ### マップ
 マップは、順序を持たない、キーと値のペアである。  
 キーには、文字列以外も指定可能であり、宣言時にはmakeを用いて宣言する。  
-なお、値は後から上書きすることは可能である。
+なお、値は後から上書きすることは可能である。  
+また、繰り返し処理を用いることでキーと値のペアを追加することも可能である。
 ```go
 map1 := make(map[string]int)
 map1["Hokkaido"] = 0
@@ -284,7 +285,14 @@ map1["Hokkaido"] = 1
 fmt.Println(map1) // map[Hokkaido:1]
 
 map2 := make(map[int]string)
-map2[1] = "Hokkaido"
+map2[1 = "Hokkaido"
 map2[47] = "Okinawa"
 fmt.Println(map2) // map[1:Hokkaido 47:Okinawa]
+
+map3 := make(map[int]string)
+for i := 0; i < 10; i++ {
+  map3[i] = "val_" + strconv.Itoa(i)
+}
+fmt.Println("map3", map3) // map[0:val_0 1:val_1 2:val_2 3:val_3 4:val_4 5:val_5 6:val_6 7:val_7 8:val_8 9:val_9]
+
 ```
