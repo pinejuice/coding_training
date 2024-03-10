@@ -168,4 +168,5 @@ func maps() {
 		map3[i] = "val_" + strconv.Itoa(i)
 	}
 	fmt.Println("map3", map3)
+	fmt.Println("map3[1]", map3[1])
 }
