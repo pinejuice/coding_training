@@ -285,7 +285,7 @@ map1["Hokkaido"] = 1
 fmt.Println(map1) // map[Hokkaido:1]
 
 map2 := make(map[int]string)
-map2[1] = "Hokkaido"
+map2[1]  = "Hokkaido"
 map2[47] = "Okinawa"
 fmt.Println(map2) // map[1:Hokkaido 47:Okinawa]
 
