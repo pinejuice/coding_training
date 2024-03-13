@@ -169,4 +169,6 @@ func maps() {
 	}
 	fmt.Println("map3", map3)
 	fmt.Println("map3[1]", map3[1])
+	delete(map3, 3)
+	fmt.Println("map3", map3)
 }
