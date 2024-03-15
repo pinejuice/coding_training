@@ -295,6 +295,13 @@ for i := 0; i < 10; i++ {
 }
 fmt.Println("map3", map3) // map[0:val_0 1:val_1 2:val_2 3:val_3 4:val_4 5:val_5 6:val_6 7:val_7 8:val_8 9:val_9]
 ```
+for文を使ってキーと値のペアを取得することも可能であるが、マップは順不同な為、毎回ランダムな順番で取得される。  
+順番を固定させるのであれば、キーだけを配列として取得し、ソート後に繰り返し処理をすることになる。
+```go
+for key, value := range map3 {
+  fmt.Println(key, value)
+}
+```
 マップから要素を削除するには、`delete(map, [削除対象のキー])`とする。
 ```go
 delete(map3, 3)
