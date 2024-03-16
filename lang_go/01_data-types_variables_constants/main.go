@@ -169,9 +169,11 @@ func maps() {
 	}
 	fmt.Println("map3", map3)
 	fmt.Println("map3[1]", map3[1])
+	fmt.Println("順不同で表示")
 	for key, value := range map3 {
 		fmt.Println(key, value)
 	}
+
 	delete(map3, 3)
 	fmt.Println("map3", map3)
 }
