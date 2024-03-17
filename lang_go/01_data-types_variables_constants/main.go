@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strconv"
 )
 
@@ -171,9 +172,16 @@ func maps() {
 	fmt.Println("map3[1]", map3[1])
 	fmt.Println("順不同で表示")
 	for key, value := range map3 {
-		fmt.Println(key, value)
+		fmt.Println(key, ":", value)
 	}
-
+	keys := []int{}
+	for k := range map3 {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
+	for k := range keys {
+		fmt.Println(k, ":", map3[k])
+	}
 	delete(map3, 3)
 	fmt.Println("map3", map3)
 }
