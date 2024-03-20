@@ -317,3 +317,24 @@ for k := range keys {
 delete(map3, 3)
 fmt.Println("map3", map3) // map[0:val_0 1:val_1 2:val_2 4:val_4 5:val_5 6:val_6 7:val_7 8:val_8 9:val_9]
 ```
+マップに存在しないキーを指定して値を取ろうとすると、値が文字列型の場合はブランク、数値型の場合は 0 となる。  
+また、マップにキーが存在しているかを確認するには、値を取得する際に2つの変数で取得することで確認ができる。
+```go
+// 存在しないキーを指定した場合（バリュー：文字列）
+map4 := make(map[int]string)
+map4[1] = "One"
+map4[2] = "two"
+fmt.Println("map4", map4) // map4 map[1:One 2:two]
+fmt.Println("map4[3]", map4[3]) //map4[3]
+// 存在しないキーを指定した場合（バリュー；数値）
+map5 := make(map[string]int)
+map5["One"] = 1
+map5["two"] = 2
+fmt.Println("map5", map5) //map5 map[One:1 two:2]
+fmt.Println("map5[Three]", map5["Three"]) // map5[Three] 0
+// キーの存在確認
+v_one, exists_one := map5["One"]
+fmt.Println("Key One: Value =", v_one, "/ Exists = ", exists_one) // Key One: Value = 1 / Exists =  true
+v_three, exists_three := map5["Three"]
+fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three) // Key Three: Value = 0 / Exists =  false
+```

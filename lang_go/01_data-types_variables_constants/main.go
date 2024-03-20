@@ -184,4 +184,23 @@ func maps() {
 	}
 	delete(map3, 3)
 	fmt.Println("map3", map3)
+
+	// 存在しないキーを指定した場合（バリュー：文字列）
+	map4 := make(map[int]string)
+	map4[1] = "One"
+	map4[2] = "two"
+	fmt.Println("map4", map4)
+	fmt.Println("map4[3]", map4[3])
+	// 存在しないキーを指定した場合（バリュー；数値）
+	map5 := make(map[string]int)
+	map5["One"] = 1
+	map5["two"] = 2
+	fmt.Println("map5", map5)
+	fmt.Println("map5[Three]", map5["Three"])
+	// キーの存在確認
+	v_one, exists_one := map5["One"]
+	fmt.Println("Key One: Value =", v_one, "/ Exists = ", exists_one)
+	v_three, exists_three := map5["Three"]
+	fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three)
+
 }
