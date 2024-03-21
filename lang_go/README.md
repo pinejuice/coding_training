@@ -37,7 +37,7 @@
     5. [文字列](#文字列)
     6. [配列とスライス](#配列とスライス)
     7. [マップ](#マップ)
-    8. struct（構造体）
+    8. [struct（構造体）](#struct構造体)
     9. interface{}またはany
 2. 基本文法
     1. 四則演算
@@ -338,3 +338,5 @@ fmt.Println("Key One: Value =", v_one, "/ Exists = ", exists_one) // Key One: Va
 v_three, exists_three := map5["Three"]
 fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three) // Key Three: Value = 0 / Exists =  false
 ```
+
+### struct（構造体）
