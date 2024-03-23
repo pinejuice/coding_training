@@ -343,5 +343,8 @@ fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three) // Key T
 Goでは、C言語と同じような構造体を宣言可能である。
 これは、`type`を用いて型に名前を付けることの応用みたいなものである。
 ```go
-
+type User struct {
+  Name String
+  age int
+}
 ```
