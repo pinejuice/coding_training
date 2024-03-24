@@ -347,4 +347,7 @@ type User struct {
   Name String
   age int
 }
+var user1 User 
+user1.Name = "Demo1"
+user.age = 30
 ```
