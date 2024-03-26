@@ -22,6 +22,9 @@ func main() {
 
 	// マップについて
 	maps()
+
+	// struct（構造体）について
+	structs()
 }
 
 func variablesAndConstants() {
@@ -203,4 +206,15 @@ func maps() {
 	v_three, exists_three := map5["Three"]
 	fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three)
 
+}
+
+func structs() {
+	type User struct {
+		Name string
+		age  int
+	}
+	var user1 User
+	user1.Name = "Demo1"
+	user1.age = 30
+	fmt.Println("user1: ", user1)
 }
