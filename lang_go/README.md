@@ -344,10 +344,11 @@ Goでは、C言語と同じような構造体を宣言可能である。
 これは、`type`を用いて型に名前を付けることの応用みたいなものである。
 ```go
 type User struct {
-  Name String
+  Name string
   age int
 }
 var user1 User 
 user1.Name = "Demo1"
-user.age = 30
+user1.age = 30
+fmt.Println("user1: ", user1) // {Demo1 30}
 ```
