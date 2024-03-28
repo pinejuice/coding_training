@@ -217,4 +217,5 @@ func structs() {
 	user1.Name = "Demo1"
 	user1.age = 30
 	fmt.Println("user1: ", user1)
+	fmt.Println("user1.Name: ", user1.Name)
 }
