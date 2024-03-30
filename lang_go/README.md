@@ -340,8 +340,9 @@ fmt.Println("Key Three: Value =", v_three, "/ Exists = ", exists_three) // Key T
 ```
 
 ### struct（構造体）
-Goでは、C言語と同じような構造体を宣言可能である。
-これは、`type`を用いて型に名前を付けることの応用みたいなものである。
+Goでは、C言語と同じような構造体を宣言可能である。  
+これは、`type`を用いて型に名前を付けることの応用みたいなものである。  
+この構造体を利用することで、JSON形式のデータも変数に格納することが可能である。
 ```go
 type User struct {
   Name string
