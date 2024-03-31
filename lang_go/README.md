@@ -353,4 +353,11 @@ user1.Name = "Demo1"
 user1.age = 30
 fmt.Println("user1: ", user1) // user1:  {Demo1 30}
 fmt.Println("user1.Name: ", user1.Name) // user1.Name:  Demo1
+
+user2 := User{
+  Name: "Demo2",
+  age:  31,
+}
+fmt.Println("user2: ", user2)
+fmt.Println("user2.Name: ", user2.Name)
 ```
