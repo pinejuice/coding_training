@@ -358,6 +358,6 @@ user2 := User{
   Name: "Demo2",
   age:  31,
 }
-fmt.Println("user2: ", user2)
-fmt.Println("user2.Name: ", user2.Name)
+fmt.Println("user2: ", user2) // user2:  {Demo2 31}
+fmt.Println("user2.Name: ", user2.Name) // user2.Name:  Demo2
 ```
